@@ -59,6 +59,7 @@ def region_of_interest(image):
     masked_image = cv2.bitwise_and(image, mask) #
     return masked_image
 
+""" 
 image = cv2.imread('test_image.jpeg')
 lane_image = np.copy(image)
 canny_image = canny(lane_image)
@@ -73,4 +74,24 @@ combo_image = cv2.addWeighted(lane_image, 0.8, line_image, 1, 1)
 
 cv2.imshow("result",combo_image)
 cv2.waitKey(0)
+"""
+cap = cv2.VideoCapture("test2.mp4")
+while(cap.isOpened()):
+    _, frame = cap.read()  #this function returns two values. The first value is a boolean we are curently not interested in and the second value is the image(frame) that is currently been projected in our video
+    canny_image = canny(frame)
+    cropped_image = region_of_interest(canny_image)
+    lines = cv2.HoughLinesP(cropped_image,2, np.pi/180, 100, np.array([]), minLineLength=40, maxLineGap=5 )
+    averaged_lines = average_slope_intercept(frame, lines)
+    line_image = display_lines(frame, averaged_lines)
+    combo_image = cv2.addWeighted(frame, 0.8, line_image, 1, 1)
+    cv2.imshow("result",combo_image)
+    if cv2.waitKey(1) == ord("q"): #we wait 1ms between each frame. And if the q is pressed the video cancels
+        break
+cap.release()  #we close the video file
+cv2.destroyAllWindows()
 
+############################
+#Notes
+#1. We use canny to convert our colour image to a gradient image(i.e. black and white)
+#2. From the gradient image we detected the most relevant lines
+#3. Whe avaraged out the lines, then displayed them on the image that is currently been processed 

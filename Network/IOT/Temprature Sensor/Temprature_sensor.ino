@@ -21,7 +21,7 @@ OneWire oneWire(Temprature_sensor);
 DallasTemperature sensors(&oneWire);
 
 void setup(){
-   // We the initialize serial output
+   // We initialize the serial output
   Serial.begin(9600);
 
 //BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI BEGIN_WIFI

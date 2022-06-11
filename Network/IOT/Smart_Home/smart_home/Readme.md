@@ -1,1 +1,1 @@
-This directory conatins the header file and code of the smart home.
+The code and header files created for the smart home can be found in this directory.

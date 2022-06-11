@@ -198,11 +198,11 @@ void MQTT_Subscribe(){
         delay(2); 
       }
       while (subMessage == "INDIVIDUAL"){                          // from: smart_home/smart_light topic
-        Serial.println("Turning on room light");  //need_content_from Abeeb
+        Serial.println("Turning on room light");
       }
         
       while (subMessage == "OFF_LIGHT"){                           //from: smart_home/light_bulb topic
-        Serial.println("Turning off room light"); //need_content_from Abeeb
+        Serial.println("Turning off room light"); 
       }
 
       while (subMessage == "INTRUDER_DETECTED"){                  //from: smart_home/theft topic

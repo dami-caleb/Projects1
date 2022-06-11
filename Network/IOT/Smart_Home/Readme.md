@@ -6,8 +6,8 @@ In this project a Raspberry Pi 3 serves as the main node hosting the MQTT broker
 
 This smart home project consits of:
 
-1.A lighting system that switches on automatically when sensors identify a human in a room.
+1. A lighting system that switches on automatically when sensors identify a human in a room.
 
-2.A smart heating system that detects any temperature change in the house and automatically adjusts the temperature to the home owner's preferred setting.
+2. A smart heating system that detects any temperature change in the house and automatically adjusts the temperature to the home owner's preferred setting.
 
-3.A home intruder detector that sounds an alarm if someone attempts to break into a guarded area.
+3. A home intruder detector that sounds an alarm if someone attempts to break into a guarded area.

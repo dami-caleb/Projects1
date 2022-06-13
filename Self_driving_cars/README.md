@@ -7,3 +7,4 @@ This repository is about writing code for self driving vehicles.
 I make use of practical deep learning and apply it to building a self-driving vehicle.
 
 
+![Requirements Diagram](https://user-images.githubusercontent.com/72282670/173261585-bd878718-3ee2-4075-9817-703c5161418a.png)

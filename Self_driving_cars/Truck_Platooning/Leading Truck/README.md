@@ -1,0 +1,1 @@
+Implementation of an appropriate learning algorithm (using Scikit) for determining the leader vehicle.

@@ -1,5 +1,5 @@
 # Self Driving Cars
-This repository is about writing code for self driving cars.
+This repository is about writing code for self driving vehicles.
 
 ![autonomous-car](https://user-images.githubusercontent.com/72282670/162584792-a849d579-52d5-4276-8dbb-f21751c45feb.jpeg)
 

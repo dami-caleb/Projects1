@@ -1,0 +1,1 @@
+This is a work in progress directory. And it has the tkinter and pygame simulation environment I'm making for the truck platoon.

@@ -285,7 +285,7 @@ def on_determine_leading_truck_button():
         output_var2.set(message2)
         print(message2)
     else:
-        message2 = "The red truck truck is a following truck"
+        message2 = "The red truck is a following truck"
         output_var2.set(message2)
         print(message2)
 

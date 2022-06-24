@@ -272,11 +272,11 @@ def on_determine_leading_truck_button():
         print(message)
 
     if (truck2_predicted_value[0] ==1):
-        message1 = "The grey truck can not be the leading truck"
+        message1 = "The grey truck can be the leading truck"
         output_var1.set(message1)
         print(message1)
     else:
-        message1 = "The grey truck truck is a following truck"
+        message1 = "The grey truck is a following truck"
         output_var1.set(message1)
         print(message1)
 

@@ -1,5 +1,5 @@
 # Simulation
 
-The determine the leading truck python file is an application that let's the user entire the features of the trucks that is used to determine the leading truck for the simulation using machine learning decision trees. 
+The determine_leading_truck.py python file is an application that let's the user entire the features of the trucks that is used to determine the leading truck for the simulation using machine learning.
 
-After running the determine_leading_truck.py file then you run the control.py file, that runs the truck platoon simulation.
+Run the control.py file, which executes the truck platoon simulation, after running the determine leading truck.py file, which determines the leading truck for the simulation.

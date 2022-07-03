@@ -12,4 +12,4 @@ This smart home project consits of:
 
 * A home intruder detector that sounds an alarm if someone attempts to break into a guarded area.
 
-**Note:** **First download the powerpoint presentation at https://hshl.sciebo.de/s/wSpKQ4vEtA8GkZB to get started (it contains video demonatrations that can only be viewed if downloaded). Then view the code (i.e. the smart_home.ino file) in the smart_home directory**
+**Note:** **First download the powerpoint presentation at https://hshl.sciebo.de/s/wSpKQ4vEtA8GkZB to get started (it contains video demonatrations that can only be viewed if downloaded). Then view the code (i.e. the smart_home.ino file) in the smart_home directory.**

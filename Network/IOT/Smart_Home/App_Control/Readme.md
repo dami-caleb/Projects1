@@ -1,4 +1,4 @@
-A screenshot of utilizing a phone to operate (turn off and on) the smart home appliances
+A screenshot of utilizing a phone to operate the smart home.
 .
 
 

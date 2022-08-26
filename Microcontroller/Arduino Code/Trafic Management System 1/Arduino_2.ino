@@ -3,7 +3,7 @@
 
 #define PR 1
 #define PG 2
-#define PedestrianWaiting 3 //why is this not colored
+#define PedestrianWaiting 3
 
 int P_state = PR;
 
@@ -28,7 +28,7 @@ void setup(){
   	Serial.begin(96000);
 
     pinMode(push_button, INPUT_PULLUP);
-  	attachInterrupt(digitalPinToInterrupt(push_button),button_func,CHANGE);// "RISING" because we are uging an "active-high" push button
+  	attachInterrupt(digitalPinToInterrupt(push_button),button_func,CHANGE);// "RISING" because we are using an "active-high" push button
 
 
 }

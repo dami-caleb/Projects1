@@ -11,7 +11,7 @@
 #define TG 1
 #define TY 2
 #define TR 3
-#define PedestrianWaiting1 4  //why is this not hihlighted
+#define PedestrianWaiting1 4
 
 
 

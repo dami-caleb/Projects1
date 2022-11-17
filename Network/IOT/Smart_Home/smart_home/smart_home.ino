@@ -1,4 +1,4 @@
-t//Required libraries for the WiFi
+//Required libraries for the WiFi
 #include <SPI.h>
 #include <WiFiNINA.h>
 
@@ -37,6 +37,12 @@ DallasTemperature sensors(&oneWire);
 long duration; // variable for the duration of sound wave travel
 int distance; // variable for the distance measurement
 
+//Pin declearation for PIR sensor
+#define PIR_SENSOR 12
+int sensorState = 0;    //For the PIR sensor
+
+//Pin declearation for the LED
+#define LED 13
 
 
 
@@ -199,10 +205,12 @@ void MQTT_Subscribe(){
       }
       while (subMessage == "INDIVIDUAL"){                          // from: smart_home/smart_light topic
         Serial.println("Turning on room light");
+        LED_action_on();
       }
         
       while (subMessage == "OFF_LIGHT"){                           //from: smart_home/light_bulb topic
-        Serial.println("Turning off room light"); 
+        Serial.println("Turning off room light");
+        LED_action_off();
       }
 
       while (subMessage == "INTRUDER_DETECTED"){                  //from: smart_home/theft topic
@@ -354,7 +362,7 @@ void temprature_sensor_action(){
     Serial.println(" °C");
     //Check for errors
     int temprature =  sensors.getTempCByIndex(0);
-    if (temprature >= 32){
+    if (temprature == 32){
       //MQTT_Publisher(const char *topic, const char *message)
       MQTT_Publisher("smart_home/smart_heating", "HIGH-TEMP");
       }
@@ -402,3 +410,45 @@ void Ultrasonic_Sensor_action(){
 
 
 //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  //END_ULTRASONIC_SENSOR  
+
+
+
+
+
+
+
+
+//BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR //BEGIN PIR_SENSOR//BEGIN PIR_SENSOR
+void PIR_SENSOR_setup() { 
+  pinMode(PIR_SENSOR, INPUT); 
+} 
+
+void PIR_SENSOR_action() { 
+  sensorState = digitalRead(PIR_SENSOR); 
+  if (sensorState == HIGH) { 
+    Serial.println("PIR activated!");
+    //MQTT_Publisher(const char *topic, const char *message)
+      MQTT_Publisher("smart_home/smart_light", "INDIVIDUAL");
+  } 
+}
+
+
+//END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR //END_PIR_SENSOR
+
+
+
+//BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED //BEGIN_LED 
+
+void LED_setup(){
+  pinMode(LED, OUTPUT);
+  }
+
+void LED_action_on(){
+  digitalWrite(LED,HIGH);
+  }
+
+void LED_action_off(){
+  digitalWrite(LED, LOW);
+  }
+
+//END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED //END_LED 

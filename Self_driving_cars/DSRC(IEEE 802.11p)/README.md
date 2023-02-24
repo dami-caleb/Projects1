@@ -1,0 +1,1 @@
+Add MATLAB code for DSRC (IEEE 802.11p) protocol. The code includes functions for packet generation, transmission, and reception with configurable parameters. Tested with sample inputs and output. Documentation updated accordingly.

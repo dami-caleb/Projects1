@@ -1,4 +1,4 @@
-A Simulink module for the house heater control system. The module includes models for temperature sensing, heating element control, and user interface, which have been thoroughly tested and validated.
+A MATLAB/Simulink module for the house heater control system. The module includes models for temperature sensing, heating element control, and user interface, which have been thoroughly tested and validated.
 
 The temperature sensing model features an adjustable setpoint with a PID controller for accurate and responsive temperature regulation. The heating element control model utilizes pulse-width modulation (PWM) for efficient power management, and can be configured for different heating elements with varying power ratings. The user interface model provides an intuitive graphical user interface (GUI) for users to set temperature setpoints, view current temperature readings, and monitor heater status.
 
